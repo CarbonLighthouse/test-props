@@ -1,14 +1,14 @@
 {
   "name": "test-props",
   "version": "0.0.0",
-  "description": "Testing utility for creating flexible react props",
+  "description": "Testing utility for creating react elements with flexible props",
   "repository": "CarbonLighthouse/test-props",
   "author": {
     "name": "Will Vaughn",
     "email": "willieviseoae@gmail.com"
   },
   "license": "MIT",
-  "main": "lib/foo.js",
+  "main": "lib/testProps.js",
   "engines": {
     "node": ">=6"
   },
@@ -29,7 +29,7 @@
     "ci": "npm run lint && npm run cov",
     "cov": "nyc --reporter=html --reporter=text npm test",
     "lint": "eslint lib test",
-    "test": "mocha --reporter list",
+    "test": "mocha",
     "tdd": "watch 'clear && npm run -s test' lib test"
   },
   "eslintConfig": {
