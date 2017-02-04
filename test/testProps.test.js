@@ -32,10 +32,12 @@ describe('lib/testProps', () => {
       const defaultProps = {greeting: 'Hello', toWhat: 'Friend'};
       const customProps = {greeting: 'Salam'};
 
-      const actual = testProps.elementFactory(React, Greeting, defaultProps)(customProps);
-      const expected = React.createElement(Greeting, {greeting: 'Salam', toWhat: 'Friend'});
+      const [actualEl, actualProps] = testProps.elementFactory(React, Greeting, defaultProps)(customProps);
+      const expectedEl = React.createElement(Greeting, {greeting: 'Salam', toWhat: 'Friend'});
+      const expectedProps = {greeting: 'Salam', toWhat: 'Friend'};
 
-      assert.deepEqual(actual, expected, 'builds component element');
+      assert.deepEqual(actualEl, expectedEl, 'builds component element');
+      assert.deepEqual(actualProps, expectedProps, 'builds props');
     });
   });
 });

@@ -31,7 +31,7 @@ createMyProps({foo: 'baz'});
 
 **testProps.elementFactory**
 
-(React, Component, defaultProps) -> customProps -> ReactElement
+(React, Component, defaultProps) -> customProps -> [ReactElement, props<Object>]
 
 ```js
 import $ from 'teaspoon';
@@ -47,7 +47,7 @@ const createGreeting = elementFactory(React, Greeting, {greeting: 'Hello', toWha
 
 describe('Greeting', () => {
   it('should display greeting', () => {
-    const el = createGreeting({greeting: 'Salam'});
+    const [el] = createGreeting({greeting: 'Salam'});
 
     const actual = $(el).shallowRender().text();
     const expected = 'Salam Buddy'
