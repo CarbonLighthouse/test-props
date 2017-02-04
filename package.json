@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/CarbonLighthouse/test-props#readme",
   "devDependencies": {
+    "coveralls": "^2.11.15",
     "eslint": "^3.14.1",
     "eslint-config-xo-space": "^0.15.0",
     "mocha": "^3.2.0",
