@@ -1,6 +1,6 @@
 {
   "name": "test-props",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Testing utility for creating react elements with flexible props",
   "repository": "CarbonLighthouse/test-props",
   "author": {
