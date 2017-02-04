@@ -47,9 +47,7 @@ describe('Greeting', () => {
   it('should display greeting', () => {
     const el = createGreeting({greeting: 'Salam'});
 
-    const actual = $(el)
-        .shallowRender()
-        .text();
+    const actual = $(el).shallowRender().text();
     const expected = 'Salam Buddy'
 
     assert.equal(actual, expected);
