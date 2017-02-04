@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/CarbonLighthouse/test-props.svg?branch=master)](https://travis-ci.org/CarbonLighthouse/test-props) [![Coverage Status](https://coveralls.io/repos/github/CarbonLighthouse/test-props/badge.svg?branch=master)](https://coveralls.io/github/CarbonLighthouse/test-props?branch=master)
+
 # test-props
 
 > Testing utility for creating flexible react props
