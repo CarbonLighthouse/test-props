@@ -41,11 +41,13 @@ const Greeting = (props) => <div>{props.greeting} {props.toWhat}</div>
 
 // You get to reuse this in all your tests until you want to customize
 // the props you pass to the element.
-const createElement = elementFactory(React, Greeting, {greeting: 'Hello', toWhat: 'Buddy'});
+const createGreeting = elementFactory(React, Greeting, {greeting: 'Hello', toWhat: 'Buddy'});
 
 describe('Greeting', () => {
   it('should display greeting', () => {
-    const actual = $(createElement({greeting: 'Salam'}))
+    const el = createGreeting({greeting: 'Salam'});
+
+    const actual = $(el)
         .shallowRender()
         .text();
     const expected = 'Salam Buddy'
