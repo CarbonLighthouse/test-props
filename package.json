@@ -27,6 +27,7 @@
   "dependencies": {},
   "scripts": {
     "ci": "npm run lint && npm run cov",
+    "ci:cov": "nyc report --reporter=text-lcov | coveralls",
     "cov": "nyc --reporter=html --reporter=text npm test",
     "lint": "eslint lib test",
     "test": "mocha",
