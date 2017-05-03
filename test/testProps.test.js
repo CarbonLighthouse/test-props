@@ -1,4 +1,5 @@
 const assert = require('assert');
+const createReactClass = require('create-react-class');
 const React = require('react');
 const testProps = require('../lib/testProps');
 
@@ -23,7 +24,7 @@ describe('lib/testProps', () => {
 
   describe('elementFactory', () => {
     it('should create component with customizable prop values', () => {
-      const Greeting = React.createClass({
+      const Greeting = createReactClass({
         render() {
           return React.createElement('div', null, `${this.props.greeting} ${this.props.toWhat}`);
         }
